@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+}
+
+.grid-container > div {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  justify-content: center;
+}
+
+.grid > div {
+  background-color: #04AA6D;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+</style>
+</head>
+<body>
+
+<div class="grid">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.grid > div {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header {
+  background-color: dimgray !important;
+  grid-column: 1 / 4;
+}
+
+.sidebar {
+  background-color: gray !important;
+  grid-row: 2 / 4;
+}
+</style>
+</head>
+<body>
+
+<div class="grid">
+  <div class="header">Header</div>
+  <div class="sidebar">Sidebar</div>
+  <div>Content 1</div>
+  <div>Content 2</div>
+  <div>Content 3</div>
+  <div>Content 4</div>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.grid > div {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.col-8 {
+  grid-column: span 8;
+}
+
+.col-4 {
+  background-color: dimgray !important;
+  grid-column: span 4;
+}
+</style>
+</head>
+<body>
+
+<div class="grid">
+  <div class="col-8">Main (8/12)</div>
+  <div class="col-4">Sidebar (4/12)</div>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+@supports (display: grid) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</div>
+
+</body>
+</html>

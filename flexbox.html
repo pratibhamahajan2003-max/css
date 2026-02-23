@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  background-color: #f1f1f1;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.container > div {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  height: 200px;
+  background-color: #f1f1f1;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container > div {
+  background-color: #04AA6D;
+  color: white;
+  width: 100px;
+  margin: 5px;
+  padding: 20px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  background-color: #04AA6D;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+}
+
+#main {
+  flex: 2;
+}
+
+#sidebar {
+  background-color: dimgray;
+  order: -1;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="item" id="main">Main Content</div>
+  <div class="item" id="sidebar">Sidebar</div>
+  <div class="item">Extra</div>
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.navbar {
+  background-color: dimgray;
+  display: flex;
+  justify-content: space-around;
+}
+
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+</div>
+
+</body>
+</html>
